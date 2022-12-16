@@ -9,8 +9,8 @@ class ApiResponse {
   final String type;
   final int participants;
   final double price;
-  final String link;
-  final String key;
+  final String? link;
+  final String? key;
 
   ApiResponse(this.activity, this.accessibility, this.type, this.participants,
       this.price, this.link, this.key);
