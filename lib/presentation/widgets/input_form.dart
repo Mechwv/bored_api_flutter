@@ -15,14 +15,13 @@ class InputForm extends StatefulWidget {
 class _InputFormState extends State<InputForm> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   final accController = TextEditingController();
-  final typeController = TextEditingController();
   final partController = TextEditingController();
   final priceController = TextEditingController();
-  String type = '';
+  String type = 'education';
 
   @override
   Widget build(BuildContext context) {
-    // final HomeBloc _homeBloc = BlocProvider.of<HomeBloc>(context);
+    final HomeBloc _homeBloc = BlocProvider.of<HomeBloc>(context);
 
     callBack(String chosenType) {
       type = chosenType;
@@ -64,11 +63,17 @@ class _InputFormState extends State<InputForm> {
                 // Process data.
                 // }
 
+                String a = priceController.text;
                 // _homeBloc.add(GetActivityEvent(
                 //     price: double.parse(priceController.text),
                 //     accessibility: double.parse(accController.text),
                 //     type: type,
                 //     participants: int.parse(partController.text)));
+                _homeBloc.add(GetActivityEvent(
+                    price: double.parse(priceController.text),
+                    accessibility: null,
+                    type: null,
+                    participants: null));
               },
               child: const Text('Submit'),
             ),

@@ -36,8 +36,10 @@ Widget TextRow(String text, String value) {
       const SizedBox(
         width: 10,
       ),
-      Text(value,
-          style: const TextStyle(fontSize: 16)),
+      Flexible(
+        child: Text(value,
+            style: const TextStyle(fontSize: 16)),
+      ),
     ],
   );
 }
