@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class DropdownForm extends StatefulWidget {
-  const DropdownForm({super.key});
+  const DropdownForm({super.key, required this.callBack});
+  final Function callBack;
 
   @override
   State<DropdownForm> createState() => _DropdownFormState();
@@ -10,6 +11,7 @@ class DropdownForm extends StatefulWidget {
 class _DropdownFormState extends State<DropdownForm> {
   static const List<String> list = <String>["education", "recreational", "social", "diy", "charity", "cooking", "relaxation", "music", "busywork"];
   String dropdownValue = list.first;
+
 
   @override
   Widget build(BuildContext context) {
@@ -26,6 +28,7 @@ class _DropdownFormState extends State<DropdownForm> {
         // This is called when the user selects an item.
         setState(() {
           dropdownValue = value!;
+          widget.callBack(value);
         });
       },
       items: list.map<DropdownMenuItem<String>>((String value) {

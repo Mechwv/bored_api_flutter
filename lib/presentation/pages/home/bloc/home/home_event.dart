@@ -8,14 +8,12 @@ abstract class HomeEvent extends Equatable {
 }
 
 class GetActivityEvent extends HomeEvent {
-  final double price;
-  final double accessibility;
-  final String type;
-  final int participants;
+  final double? price;
+  final double? accessibility;
+  final String? type;
+  final int? participants;
 
-  const GetActivityEvent(
-      {required this.price,
-      required this.accessibility,
-      required this.type,
-      required this.participants});
+  const GetActivityEvent({this.price, this.accessibility, this.type, this.participants});
+
+
 }
