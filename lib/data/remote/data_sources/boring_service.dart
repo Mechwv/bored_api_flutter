@@ -3,14 +3,14 @@ import 'package:dio_logger/dio_logger.dart';
 
 import '../models/api_response.dart';
 
-class WeatherService {
+class BoringService {
   static const _BASE_URL = 'http://www.boredapi.com/api/activity';
 
   final Dio _dio = Dio(
     BaseOptions(baseUrl: _BASE_URL),
   );
 
-  WeatherService() {
+  BoringService() {
     _dio.interceptors.add(dioLoggerInterceptor);
   }
 

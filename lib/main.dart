@@ -1,4 +1,4 @@
-import 'package:bored_api/presentation/widgets/input_form.dart';
+import 'package:bored_api/presentation/pages/home/home_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,46 +16,6 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: const MyHomePage(title: 'Flutter Autistic App'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      resizeToAvoidBottomInset: false,
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(25.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: const <Widget>[
-              Text(
-                'Заполните желаемые поля \n для выбора активности',
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold
-                ),
-              ),
-              InputForm(),
-            ],
-          ),
-        ),
-      ),
     );
   }
 }

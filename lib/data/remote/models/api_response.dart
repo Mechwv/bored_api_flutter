@@ -12,8 +12,8 @@ class ApiResponse {
   final String? link;
   final String? key;
 
-  ApiResponse(this.activity, this.accessibility, this.type, this.participants,
-      this.price, this.link, this.key);
+  ApiResponse({required this.activity, required this.accessibility, required this.type, required this.participants,
+      required this.price, this.link, this.key});
 
   factory ApiResponse.fromJson(Map<String, dynamic> json) =>
       _$ApiResponseFromJson(json);

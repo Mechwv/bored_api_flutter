@@ -7,13 +7,13 @@ part of 'api_response.dart';
 // **************************************************************************
 
 ApiResponse _$ApiResponseFromJson(Map<String, dynamic> json) => ApiResponse(
-      json['activity'] as String,
-      (json['accessibility'] as num).toDouble(),
-      json['type'] as String,
-      json['participants'] as int,
-      (json['price'] as num).toDouble(),
-      json['link'] as String,
-      json['key'] as String,
+      activity: json['activity'] as String,
+      accessibility: (json['accessibility'] as num).toDouble(),
+      type: json['type'] as String,
+      participants: json['participants'] as int,
+      price: (json['price'] as num).toDouble(),
+      link: json['link'] as String?,
+      key: json['key'] as String?,
     );
 
 Map<String, dynamic> _$ApiResponseToJson(ApiResponse instance) =>

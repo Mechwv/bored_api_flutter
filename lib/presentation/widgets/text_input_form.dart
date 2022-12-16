@@ -14,6 +14,19 @@ Widget TextInputForm(String text, String hintText, Widget inputWidget) {
       ),
       Row(
         children: [
+          // CheckboxListTile(
+          //   title: Text("title text"),
+          //   value: checkedValue,
+          //   onChanged: (newValue) {
+          //     setState(() {
+          //       checkedValue = newValue;
+          //     });
+          //   },
+          //   controlAffinity: ListTileControlAffinity.leading,  //  <-- leading Checkbox
+          // ),
+          const SizedBox(
+            width: 5,
+          ),
           Text(text,
               style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
           const SizedBox(
