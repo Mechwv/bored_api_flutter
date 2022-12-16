@@ -7,11 +7,11 @@ part of 'api_response.dart';
 // **************************************************************************
 
 ApiResponse _$ApiResponseFromJson(Map<String, dynamic> json) => ApiResponse(
-      activity: json['activity'] as String,
-      accessibility: (json['accessibility'] as num).toDouble(),
-      type: json['type'] as String,
-      participants: json['participants'] as int,
-      price: (json['price'] as num).toDouble(),
+      activity: json['activity'] as String?,
+      accessibility: (json['accessibility'] as num?)?.toDouble(),
+      type: json['type'] as String?,
+      participants: json['participants'] as int?,
+      price: (json['price'] as num?)?.toDouble(),
       link: json['link'] as String?,
       key: json['key'] as String?,
     );

@@ -6,11 +6,11 @@ Widget ResponseCard(ApiResponse response) {
   return BaseCard(
     child: Column(
       children: [
-        TextRow('Activity', response.activity),
+        TextRow('Activity', response.activity.toString()),
         CustomDivider(),
         TextRow('Accessibility', response.accessibility.toString()),
         CustomDivider(),
-        TextRow('Type', response.type),
+        TextRow('Type', response.type.toString()),
         CustomDivider(),
         TextRow('Participants', response.participants.toString()),
         CustomDivider(),

@@ -27,6 +27,6 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
         participants: event.participants,
         price: event.price,
         accessibility: event.accessibility));
-    emit(result.fold((l) => null, (r) => HomeSuccessState(response: r))!);
+    emit(result.fold((l) => const HomeErrorState(message: "UH OH SKILL ISSUE"), (r) => HomeSuccessState(response: r))!);
   }
 }

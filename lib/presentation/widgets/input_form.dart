@@ -64,16 +64,19 @@ class _InputFormState extends State<InputForm> {
                 // }
 
                 String a = priceController.text;
+                String b = partController.text;
+                String c = accController.text;
+                String d = type;
                 // _homeBloc.add(GetActivityEvent(
                 //     price: double.parse(priceController.text),
                 //     accessibility: double.parse(accController.text),
                 //     type: type,
                 //     participants: int.parse(partController.text)));
                 _homeBloc.add(GetActivityEvent(
-                    price: double.parse(priceController.text),
-                    accessibility: null,
+                    price: priceController.text != "" ? double.parse(priceController.text) : null,
+                    accessibility: accController.text != "" ? double.parse(accController.text) : null,
                     type: null,
-                    participants: null));
+                    participants: partController.text != "" ? int.parse(partController.text) : null));
               },
               child: const Text('Submit'),
             ),

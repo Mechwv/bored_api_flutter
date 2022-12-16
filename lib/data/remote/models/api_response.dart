@@ -4,11 +4,11 @@ part 'api_response.g.dart';
 
 @JsonSerializable()
 class ApiResponse {
-  final String activity;
-  final double accessibility;
-  final String type;
-  final int participants;
-  final double price;
+  final String? activity;
+  final double? accessibility;
+  final String? type;
+  final int? participants;
+  final double? price;
   final String? link;
   final String? key;
 
